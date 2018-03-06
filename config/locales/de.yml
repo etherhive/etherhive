@@ -115,7 +115,6 @@ de:
       role: Berechtigungen
       roles:
         admin: Administrator
-        moderator: Moderator
         staff: Mitarbeiter
         user: Nutzer
       salmon_url: Salmon-URL
@@ -140,7 +139,6 @@ de:
         create_custom_emoji: "%{name} hat neues Emoji %{target} hochgeladen"
         create_domain_block: "%{name} hat die Domain %{target} blockiert"
         create_email_domain_block: "%{name} hat die E-Mail-Domain %{target} geblacklistet"
-        demote_user: "%{name} stufte Benutzer %{target} herunter"
         destroy_domain_block: "%{name} hat die Domain %{target} entblockt"
         destroy_email_domain_block: "%{name} hat die E-Mail-Domain %{target} gewhitelistet"
         destroy_status: "%{name} hat Status von %{target} entfernt"
@@ -174,22 +172,17 @@ de:
       enable: Aktivieren
       enabled_msg: Das Emoji wurde aktiviert
       image_hint: PNG bis 50 kB
-      listed: Gelistet
       new:
         title: Eigenes Emoji hinzufügen
-      overwrite: Überschreiben
       shortcode: Shortcode
       shortcode_hint: Mindestens 2 Zeichen, nur Buchstaben, Ziffern und Unterstriche
       title: Eigene Emojis
-      unlisted: Ungelistet
-      update_failed_msg: Konnte dieses Emoji nicht aktualisieren
       updated_msg: Emoji erfolgreich aktualisiert!
       upload: Hochladen
     domain_blocks:
       add_new: Neu hinzufügen
       created_msg: Die Domain-Blockade wird nun durchgeführt
       destroyed_msg: Die Domain-Blockade wurde rückgängig gemacht
-      domain: Domain
       new:
         create: Blockade einrichten
         hint: Die Domain-Blockade wird nicht verhindern, dass Konteneinträge in der Datenbank erstellt werden. Aber es werden rückwirkend und automatisch alle Moderationsmethoden auf diese Konten angewendet.
@@ -266,17 +259,12 @@ de:
       view: Ansehen
     settings:
       activity_api_enabled:
-        desc_html: Anzahl der lokal geposteten Beiträge, aktiven Nutzern und neuen Registrierungen in wöchentlichen Zusammenfassungen
-        title: Veröffentliche gesamte Statistiken über Benutzeraktivitäten
       bootstrap_timeline_accounts:
         desc_html: Mehrere Profilnamen durch Kommata trennen. Funktioniert nur mit lokalen und nicht gesperrten Konten. Standardwert bei freigelassenem Feld sind alle lokalen Admins.
         title: Konten, denen Neu-Angemeldete automatisch folgen
       contact_information:
         email: Öffentliche E-Mail-Adresse
         username: Profilname für die Kontaktaufnahme
-      peers_api_enabled:
-        desc_html: Domain-Namen dieser Instanz, die im Fediverse gefunden wurden
-        title: Veröffentliche Liste von gefundenen Instanzen
       registrations:
         closed_message:
           desc_html: Wird auf der Frontseite angezeigt, wenn die Registrierung geschlossen ist. Du kannst HTML-Tags benutzen
@@ -286,13 +274,9 @@ de:
           title: Kontolöschung erlauben
         min_invite_role:
           disabled: Niemand
-          title: Einladungen erlauben von
         open:
           desc_html: Allen erlauben, ein Konto zu erstellen
           title: Registrierung öffnen
-      show_staff_badge:
-        desc_html: Zeige Mitarbeiter-Badge auf Benutzerseite
-        title: Zeige Mitarbeiter-Badge
       site_description:
         desc_html: Wird als Absatz auf der Frontseite angezeigt und als Meta-Tag benutzt. Du kannst HTML-Tags benutzen, insbesondere <code>&lt;a&gt;</code> und <code>&lt;em&gt;</code>.
         title: Beschreibung der Instanz
@@ -338,22 +322,19 @@ de:
       body: "%{reporter} hat %{target} gemeldet"
       subject: Neue Meldung auf %{instance} (#%{id})
   application_mailer:
-    notification_preferences: Ändere E-Mail-Einstellungen
     salutation: "%{name},"
     settings: 'E-Mail-Einstellungen ändern: %{link}'
     view: 'Ansehen:'
-    view_profile: Zeige Profil
-    view_status: Zeige Status
   applications:
-    created: Anwendung erfolgreich erstellt
-    destroyed: Anwendung erfolgreich gelöscht
+    created: Anwendung erstellt
+    destroyed: Anwendung gelöscht
     invalid_url: Die angegebene URL ist ungültig
     regenerate_token: Zugangs-Token neu erstellen
     token_regenerated: Zugangs-Token neu erstellt
     warning: Sei mit diesen Daten sehr vorsichtig! Teile sie mit niemandem.
     your_token: Dein Zugangs-Token
   auth:
-    agreement_html: Indem du dich registrierst, erklärst du dich mit den Regeln, die <a href="%{rules_path}">auf dieser Instanz gelten</a> und der <a href="%{terms_path}">Datenschutzerklärung</a> einverstanden.
+    agreement_html: Indem du dich registrierst, erklärst du dich mit den <a href="%{rules_path}">aInstanzregeln</a> und der <a href="%{terms_path}">Datenschutzerklärung</a> einverstanden.
     change_password: Sicherheit
     delete_account: Konto löschen
     delete_account_html: Falls du dein Konto löschen willst, kannst du <a href="%{path}">hier damit fortfahren</a>. Du wirst um Bestätigung gebeten werden.
@@ -362,8 +343,6 @@ de:
     invalid_reset_password_token: Das Token zum Zurücksetzen des Passworts ist ungültig oder abgelaufen. Bitte fordere ein neues an.
     login: Anmelden
     logout: Abmelden
-    migrate_account: Ziehe zu einem anderen Account um
-    migrate_account_html: Wenn du es wünschst diesen Account zu einem anderen umzuziehen, dann kannst du <a href="%{path}">es hier einstellen</a>.
     register: Registrieren
     resend_confirmation: Bestätigungs-Mail erneut versenden
     reset_password: Passwort zurücksetzen
@@ -445,10 +424,8 @@ de:
       following: Folgeliste
       muting: Stummschaltungsliste
     upload: Hochladen
-  in_memoriam_html: In Gedenken.
   invites:
     delete: Deaktivieren
-    expired: Abgelaufen
     expires_in:
       '1800': 30 Minuten
       '21600': 6 Stunden
@@ -461,10 +438,6 @@ de:
       one: 1 mal verwendet
       other: "%{count} mal verwendet"
     max_uses_prompt: Kein Limit
-    prompt: Generiere und teile Links um Zugang zu dieser Instanz zu geben
-    table:
-      expires_at: Läuft ab
-      uses: Verwendungen
     title: Leute Einladen
   landing_strip_html: "<strong>%{name}</strong> hat ein Profil auf %{link_to_root_path}. Du kannst folgen oder interagieren, sofern du ein Konto irgendwo im Fediversum hast."
   landing_strip_signup_html: Wenn nicht, kannst du dich <a href="%{sign_up_path}">hier anmelden</a>.
