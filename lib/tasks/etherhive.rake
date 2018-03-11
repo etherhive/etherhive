@@ -3,7 +3,7 @@
 require 'optparse'
 require 'colorize'
 
-namespace :etherhive do
+namespace :hiveway do
   desc 'Configure the instance for production use'
   task :setup do
     prompt = TTY::Prompt.new
